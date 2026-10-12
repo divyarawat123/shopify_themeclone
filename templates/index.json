@@ -275,6 +275,7 @@
         },
         "featured_collection5": {
           "type": "featured_collection",
+          "disabled": true,
           "settings": {
             "collection": ""
           }
