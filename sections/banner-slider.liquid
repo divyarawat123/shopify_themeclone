@@ -172,6 +172,7 @@
     const next = slider.querySelector('.banner-next');
 
     let currentSlide = 0;
+    let autoSlide;
 
     function showSlide(index) {
       slides.forEach(slide => {
@@ -188,31 +189,60 @@
       currentSlide = index;
     }
 
+    function nextSlide() {
+      let index = currentSlide + 1;
+
+      if (index >= slides.length) {
+        index = 0;
+      }
+
+      showSlide(index);
+    }
+
+    function previousSlide() {
+      let index = currentSlide - 1;
+
+      if (index < 0) {
+        index = slides.length - 1;
+      }
+
+      showSlide(index);
+    }
+
+    // Next button
     next.addEventListener('click', function () {
-      let nextSlide = currentSlide + 1;
-
-      if (nextSlide >= slides.length) {
-        nextSlide = 0;
-      }
-
-      showSlide(nextSlide);
+      nextSlide();
+      restartAutoSlide();
     });
 
+    // Previous button
     prev.addEventListener('click', function () {
-      let prevSlide = currentSlide - 1;
-
-      if (prevSlide < 0) {
-        prevSlide = slides.length - 1;
-      }
-
-      showSlide(prevSlide);
+      previousSlide();
+      restartAutoSlide();
     });
 
+    // Dots
     dots.forEach((dot, index) => {
       dot.addEventListener('click', function () {
         showSlide(index);
+        restartAutoSlide();
       });
     });
+
+    // Automatic slider
+    function startAutoSlide() {
+      autoSlide = setInterval(function () {
+        nextSlide();
+      }, 5000);
+    }
+
+    function restartAutoSlide() {
+      clearInterval(autoSlide);
+      startAutoSlide();
+    }
+
+    // Start automatic sliding
+    startAutoSlide();
   });
 </script>
 
