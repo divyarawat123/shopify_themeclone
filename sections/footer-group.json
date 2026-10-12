@@ -14,7 +14,7 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "link_list": {
+        "link_list_Jnd6YB": {
           "type": "link_list",
           "settings": {
             "heading": "Quick links",
@@ -23,7 +23,7 @@
         }
       },
       "block_order": [
-        "link_list"
+        "link_list_Jnd6YB"
       ],
       "settings": {
         "color_scheme": "scheme-4",
