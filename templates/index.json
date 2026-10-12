@@ -74,24 +74,25 @@
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/banner2.webp",
-            "heading": "Welcome to our store",
-            "text": "",
+            "heading": "Blossom in Tranquility",
+            "text": "Infuse Your Home with the Essence of Gulab",
             "button_label": "Shop Now",
-            "button_link": ""
+            "button_link": "shopify://products/pataka-large-container-screw-lid"
           }
         },
         "slide_jWgRpX": {
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/banner1.jpg",
-            "heading": "Welcome to our store",
-            "text": "",
+            "heading": "Experience the Aroma",
+            "text": "Indulge in the Rich Heritage of India",
             "button_label": "Shop Now",
-            "button_link": ""
+            "button_link": "shopify://products/hunter-large-container-screw-lid"
           }
         },
         "slide_7PURHE": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/images_2.jpg",
             "heading": "Welcome to our store",
