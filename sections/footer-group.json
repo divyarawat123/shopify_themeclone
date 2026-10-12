@@ -21,33 +21,34 @@
             "menu": "footer"
           }
         },
+        "link_list_Jnd6YB": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Legal",
+            "menu": "policies"
+          }
+        },
         "link_list_9eQfBh": {
           "type": "link_list",
           "settings": {
-            "heading": "Quick links",
+            "heading": "Contact Us",
             "menu": "footer"
           }
         },
         "link_list_Lnfm7w": {
           "type": "link_list",
+          "disabled": true,
           "settings": {
             "heading": "Quick links",
             "menu": "footer"
-          }
-        },
-        "link_list_Jnd6YB": {
-          "type": "link_list",
-          "settings": {
-            "heading": "Support",
-            "menu": "policies"
           }
         }
       },
       "block_order": [
         "link_list_BAzW3V",
+        "link_list_Jnd6YB",
         "link_list_9eQfBh",
-        "link_list_Lnfm7w",
-        "link_list_Jnd6YB"
+        "link_list_Lnfm7w"
       ],
       "settings": {
         "color_scheme": "scheme-4",
