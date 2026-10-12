@@ -252,25 +252,25 @@
         "featured_collection1": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "candles"
           }
         },
         "featured_collection2": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "gifts"
           }
         },
         "featured_collection3": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "collections"
           }
         },
         "featured_collection4": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "accessories"
           }
         },
         "featured_collection5": {
