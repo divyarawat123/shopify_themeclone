@@ -1,0 +1,275 @@
+<div class="banner-slider" id="BannerSlider-{{ section.id }}">
+  <div class="banner-slides">
+
+    {% for block in section.blocks %}
+      <div class="banner-slide {% if forloop.first %}active{% endif %}" {{ block.shopify_attributes }}>
+
+        {% if block.settings.image != blank %}
+          <img
+            src="{{ block.settings.image | image_url: width: 2000 }}"
+            alt="{{ block.settings.heading | escape }}"
+            width="{{ block.settings.image.width }}"
+            height="{{ block.settings.image.height }}"
+          >
+        {% endif %}
+
+        <div class="banner-content">
+          {% if block.settings.heading != blank %}
+            <h2>{{ block.settings.heading }}</h2>
+          {% endif %}
+
+          {% if block.settings.text != blank %}
+            <p>{{ block.settings.text }}</p>
+          {% endif %}
+
+          {% if block.settings.button_label != blank %}
+            <a href="{{ block.settings.button_link }}">
+              {{ block.settings.button_label }}
+            </a>
+          {% endif %}
+        </div>
+
+      </div>
+    {% endfor %}
+
+  </div>
+
+  <button class="banner-prev" type="button">❮</button>
+  <button class="banner-next" type="button">❯</button>
+
+  <div class="banner-dots">
+    {% for block in section.blocks %}
+      <button
+        type="button"
+        class="{% if forloop.first %}active{% endif %}"
+        data-slide="{{ forloop.index0 }}">
+      </button>
+    {% endfor %}
+  </div>
+</div>
+
+<style>
+  .banner-slider {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .banner-slides {
+    position: relative;
+  }
+
+  .banner-slide {
+    display: none;
+    position: relative;
+  }
+
+  .banner-slide.active {
+    display: block;
+  }
+
+  .banner-slide img {
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .banner-content {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    max-width: 500px;
+  }
+
+  .banner-content h2 {
+    font-size: 48px;
+    margin-bottom: 15px;
+  }
+
+  .banner-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .banner-content a {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .banner-prev,
+  .banner-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+  }
+
+  .banner-prev {
+    left: 20px;
+  }
+
+  .banner-next {
+    right: 20px;
+  }
+
+  .banner-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+  }
+
+  .banner-dots button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+  }
+
+  .banner-dots button.active {
+    transform: scale(1.3);
+  }
+
+  @media screen and (max-width: 749px) {
+    .banner-slide img {
+      height: 400px;
+    }
+
+    .banner-content {
+      left: 5%;
+      right: 5%;
+    }
+
+    .banner-content h2 {
+      font-size: 32px;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const slider = document.querySelector(
+      '#BannerSlider-{{ section.id }}'
+    );
+
+    if (!slider) return;
+
+    const slides = slider.querySelectorAll('.banner-slide');
+    const dots = slider.querySelectorAll('.banner-dots button');
+    const prev = slider.querySelector('.banner-prev');
+    const next = slider.querySelector('.banner-next');
+
+    let currentSlide = 0;
+
+    function showSlide(index) {
+      slides.forEach(slide => {
+        slide.classList.remove('active');
+      });
+
+      dots.forEach(dot => {
+        dot.classList.remove('active');
+      });
+
+      slides[index].classList.add('active');
+      dots[index].classList.add('active');
+
+      currentSlide = index;
+    }
+
+    next.addEventListener('click', function () {
+      let nextSlide = currentSlide + 1;
+
+      if (nextSlide >= slides.length) {
+        nextSlide = 0;
+      }
+
+      showSlide(nextSlide);
+    });
+
+    prev.addEventListener('click', function () {
+      let prevSlide = currentSlide - 1;
+
+      if (prevSlide < 0) {
+        prevSlide = slides.length - 1;
+      }
+
+      showSlide(prevSlide);
+    });
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', function () {
+        showSlide(index);
+      });
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Banner Slider",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Banner image"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Welcome to our store"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Description"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Button label",
+          "default": "Shop Now"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Banner Slider",
+      "blocks": [
+        {
+          "type": "slide"
+        },
+        {
+          "type": "slide"
+        },
+        {
+          "type": "slide"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
