@@ -21,6 +21,13 @@
             "menu": "footer"
           }
         },
+        "link_list_Lnfm7w": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Explore",
+            "menu": "footer"
+          }
+        },
         "link_list_Jnd6YB": {
           "type": "link_list",
           "settings": {
@@ -34,21 +41,13 @@
             "heading": "Contact Us",
             "menu": "footer"
           }
-        },
-        "link_list_Lnfm7w": {
-          "type": "link_list",
-          "disabled": true,
-          "settings": {
-            "heading": "Quick links",
-            "menu": "footer"
-          }
         }
       },
       "block_order": [
         "link_list_BAzW3V",
+        "link_list_Lnfm7w",
         "link_list_Jnd6YB",
-        "link_list_9eQfBh",
-        "link_list_Lnfm7w"
+        "link_list_9eQfBh"
       ],
       "settings": {
         "color_scheme": "scheme-4",
