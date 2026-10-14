@@ -1,0 +1,87 @@
+{{ 'section-faq.css' | asset_url | stylesheet_tag }}
+
+<div class="faq-section">
+  <div class="faq-container">
+    {% if section.settings.title != blank %}
+      <h2 class="faq-title">{{ section.settings.title }}</h2>
+    {% endif %}
+
+    {% for block in section.blocks %}
+      <div class="faq-item" {{ block.shopify_attributes }}>
+        <button class="faq-question" aria-expanded="false">
+          {{ block.settings.question }}
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>{{ block.settings.answer }}</p>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+<div>
+  <h1>{% render 'product-badge' %}</h1>
+</div>
+{% schema %}
+{
+  "name": "FAQ Section",
+  "tag": "section",
+  "class": "faq-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Frequently Asked Questionsss"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "faq_item",
+      "name": "FAQ Itemmm",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Questionss",
+          "default": "What is your return policy?"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Answerrr",
+          "default": "<p>We offer a 30-day return policy.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "FAQ presets",
+      "blocks": [
+        { "type": "faq_item" },
+        { "type": "faq_item" }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+<script>
+  document.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', () => {
+      const item = button.parentElement;
+      const isOpen = item.classList.contains('open');
+
+      document.querySelectorAll('.faq-item').forEach(el => {
+        el.classList.remove('open');
+        el.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+      });
+
+      if (!isOpen) {
+        item.classList.add('open');
+        button.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+</script>
