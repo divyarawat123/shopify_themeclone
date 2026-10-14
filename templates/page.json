@@ -65,10 +65,55 @@
         "mobile_content_alignment": "center",
         "show_text_below": true
       }
+    },
+    "rich_text_DpLfEc": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_Nt67mq": {
+          "type": "heading",
+          "settings": {
+            "heading": "Our Story",
+            "heading_size": "h1"
+          }
+        },
+        "text_Ak9E8U": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Each D-Lume candle is a labour of love - an extension of our slow-living philosophy&nbsp;and thoughtfully designed to help you drift off to a happy space.</p>"
+          }
+        },
+        "button_cYNVBj": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_Nt67mq",
+        "text_Ak9E8U",
+        "button_cYNVBj"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
     "main",
-    "image_banner_twLbCL"
+    "image_banner_twLbCL",
+    "rich_text_DpLfEc"
   ]
 }
