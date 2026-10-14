@@ -325,9 +325,9 @@
         "column9": {
           "type": "column",
           "settings": {
-            "title": "Add a customer testimonial",
-            "text": "",
-            "link_label": "Shop now",
+            "title": "",
+            "text": "<p>For supplying doctor days candles he got overwhelming response from doctors and his campaign for super success.</p><p></p><h2>Mr. Chetan Chimote</h2>",
+            "link_label": "",
             "link": ""
           }
         },
