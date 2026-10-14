@@ -316,9 +316,9 @@
         "column8": {
           "type": "column",
           "settings": {
-            "title": "Add a customer testimonial",
-            "text": "",
-            "link_label": "Shop now",
+            "title": "",
+            "text": "<p>The customised and personalised note of cocktails aroma candles used for Kettel one vodka brand campaign had a huge success across pan India distributors and client was overwhelmed to continue the campaign for Black label and Gold label scotch brands.</p><h2>Ms. Prajakta</h2>",
+            "link_label": "",
             "link": ""
           }
         },
