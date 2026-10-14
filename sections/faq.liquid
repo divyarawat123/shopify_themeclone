@@ -1,87 +1,293 @@
-{% comment %} {{ 'section-faq.css' | asset_url | stylesheet_tag }} {% endcomment %}
 
-<div class="faq-section">
+{% comment %}
+  FAQ Accordion Section
+{% endcomment %}
+
+<section
+  id="faq-accordion-{{ section.id }}"
+  class="faq-section"
+>
   <div class="faq-container">
-    {% if section.settings.title != blank %}
-      <h2 class="faq-title">{{ section.settings.title }}</h2>
+
+    {% if section.settings.heading != blank %}
+      <h1 class="faq-heading">
+        {{ section.settings.heading | escape }}
+      </h1>
     {% endif %}
 
-    {% for block in section.blocks %}
-      <div class="faq-item" {{ block.shopify_attributes }}>
-        <button class="faq-question" aria-expanded="false">
-          {{ block.settings.question }}
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-answer">
-          <p>{{ block.settings.answer }}</p>
-        </div>
+    {% if section.settings.description != blank %}
+      <div class="faq-description">
+        {{ section.settings.description }}
       </div>
-    {% endfor %}
+    {% endif %}
+
+    <div class="faq-list">
+      {% for block in section.blocks %}
+        <details
+          class="faq-item"
+          {% if section.settings.first_open and forloop.first %}
+            open
+          {% endif %}
+          {{ block.shopify_attributes }}
+        >
+          <summary class="faq-question">
+            <span>{{ block.settings.question | escape }}</span>
+
+            <span class="faq-icon" aria-hidden="true"></span>
+          </summary>
+
+          <div class="faq-answer rte">
+            {{ block.settings.answer }}
+          </div>
+        </details>
+      {% endfor %}
+    </div>
+
+    {% if section.blocks.size == 0 %}
+      <p>Add FAQ items using the Theme Editor.</p>
+    {% endif %}
+
   </div>
-</div>
-<div>
-  {% comment %} <h1>{% render 'product-badge' %}</h1> {% endcomment %}
-</div>
+</section>
+
+<style>
+  #faq-accordion-{{ section.id }} {
+    padding: {{ section.settings.padding_top }}px 20px
+      {{ section.settings.padding_bottom }}px;
+    background: {{ section.settings.background_color }};
+    color: {{ section.settings.text_color }};
+  }
+
+  #faq-accordion-{{ section.id }} .faq-container {
+    max-width: {{ section.settings.max_width }}px;
+    margin: 0 auto;
+  }
+
+  #faq-accordion-{{ section.id }} .faq-heading {
+    text-align: center;
+    font-size: clamp(28px, 4vw, 40px);
+    line-height: 1.2;
+    margin: 0 0 16px;
+  }
+
+  #faq-accordion-{{ section.id }} .faq-description {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 35px;
+  }
+
+  #faq-accordion-{{ section.id }} .faq-list {
+    border-top: 1px solid {{ section.settings.border_color }};
+  }
+
+  #faq-accordion-{{ section.id }} .faq-item {
+    border-bottom: 1px solid {{ section.settings.border_color }};
+  }
+
+  #faq-accordion-{{ section.id }} .faq-question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 22px 4px;
+    cursor: pointer;
+    list-style: none;
+    font-size: 17px;
+    font-weight: 600;
+  }
+
+  #faq-accordion-{{ section.id }} .faq-question::-webkit-details-marker {
+    display: none;
+  }
+
+  #faq-accordion-{{ section.id }} .faq-icon {
+    position: relative;
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+  }
+
+  #faq-accordion-{{ section.id }} .faq-icon::before,
+  #faq-accordion-{{ section.id }} .faq-icon::after {
+    content: "";
+    position: absolute;
+    background: currentColor;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.2s ease;
+  }
+
+  #faq-accordion-{{ section.id }} .faq-icon::before {
+    width: 16px;
+    height: 2px;
+  }
+
+  #faq-accordion-{{ section.id }} .faq-icon::after {
+    width: 2px;
+    height: 16px;
+  }
+
+  #faq-accordion-{{ section.id }} .faq-item[open] .faq-icon::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+
+  #faq-accordion-{{ section.id }} .faq-answer {
+    padding: 0 35px 22px 4px;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  #faq-accordion-{{ section.id }} .faq-answer p:first-child {
+    margin-top: 0;
+  }
+
+  #faq-accordion-{{ section.id }} .faq-answer p:last-child {
+    margin-bottom: 0;
+  }
+
+  #faq-accordion-{{ section.id }} .faq-question:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 4px;
+  }
+
+  @media screen and (max-width: 749px) {
+    #faq-accordion-{{ section.id }} {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+
+    #faq-accordion-{{ section.id }} .faq-question {
+      padding: 18px 2px;
+      font-size: 16px;
+    }
+
+    #faq-accordion-{{ section.id }} .faq-answer {
+      padding-right: 10px;
+    }
+  }
+</style>
+
 {% schema %}
 {
-  "name": "FAQ Section",
+  "name": "FAQ Accordion",
   "tag": "section",
-  "class": "faq-section",
+  "class": "section-faq-accordion",
   "settings": [
     {
       "type": "text",
-      "id": "title",
+      "id": "heading",
       "label": "Heading",
-      "default": "Frequently Asked Questionsss"
+      "default": "Frequently Asked Questions"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>Find answers to our most frequently asked questions.</p>"
+    },
+    {
+      "type": "checkbox",
+      "id": "first_open",
+      "label": "Open first FAQ by default",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "max_width",
+      "label": "Content width",
+      "min": 600,
+      "max": 1200,
+      "step": 50,
+      "default": 850,
+      "unit": "px"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#222222"
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Border color",
+      "default": "#dddddd"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Top spacing",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "default": 60,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Bottom spacing",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "default": 60,
+      "unit": "px"
     }
   ],
   "blocks": [
     {
-      "type": "faq_item",
-      "name": "FAQ Itemmm",
+      "type": "faq",
+      "name": "FAQ item",
       "settings": [
         {
           "type": "text",
           "id": "question",
-          "label": "Questionss",
-          "default": "What is your return policy?"
+          "label": "Question",
+          "default": "What is your shipping policy?"
         },
         {
           "type": "richtext",
           "id": "answer",
-          "label": "Answerrr",
-          "default": "<p>We offer a 30-day return policy.</p>"
+          "label": "Answer",
+          "default": "<p>We process orders as quickly as possible. Delivery times depend on your location and selected shipping method.</p>"
         }
       ]
     }
   ],
   "presets": [
     {
-      "name": "FAQ presets",
+      "name": "FAQ Accordion",
       "blocks": [
-        { "type": "faq_item" },
-        { "type": "faq_item" }
+        {
+          "type": "faq",
+          "settings": {
+            "question": "How long does shipping take?",
+            "answer": "<p>Delivery times vary depending on your location and shipping method.</p>"
+          }
+        },
+        {
+          "type": "faq",
+          "settings": {
+            "question": "Can I return or exchange an item?",
+            "answer": "<p>Please review our return policy for eligibility, time limits, and instructions.</p>"
+          }
+        },
+        {
+          "type": "faq",
+          "settings": {
+            "question": "How can I contact customer support?",
+            "answer": "<p>You can contact our support team through the Contact Us page.</p>"
+          }
+        }
       ]
     }
   ]
 }
 {% endschema %}
-
-<script>
-  document.querySelectorAll('.faq-question').forEach(button => {
-    button.addEventListener('click', () => {
-      const item = button.parentElement;
-      const isOpen = item.classList.contains('open');
-
-      document.querySelectorAll('.faq-item').forEach(el => {
-        el.classList.remove('open');
-        el.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
-      });
-
-      if (!isOpen) {
-        item.classList.add('open');
-        button.setAttribute('aria-expanded', 'true');
-      }
-    });
-  });
-</script>
