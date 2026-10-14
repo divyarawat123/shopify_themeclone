@@ -109,11 +109,207 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "image_with_text_rpELcj": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_WLAdny": {
+          "type": "heading",
+          "settings": {
+            "heading": "&nbsp;Extraordinary Candles&nbsp;",
+            "heading_size": "h1"
+          }
+        },
+        "text_fxPe4X": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Handmade in the finest tradition of luxury candle-making, our fragrances are painstakingly curated by the best perfumers in France and the USA. All our candles are hand poured in small batches allowing for utmost attention to detail and quality.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_F8EzpU": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_WLAdny",
+        "text_fxPe4X",
+        "button_F8EzpU"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_fRFJnL": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_Y69NQX": {
+          "type": "heading",
+          "settings": {
+            "heading": "&nbsp;Made With Love&nbsp;",
+            "heading_size": "h1"
+          }
+        },
+        "text_M8Cydg": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We prioritize the environment in every aspect of our candle production. Our candles embody all things good, as we carefully select our ingredients and processes. We exclusively use plant-based wax or a traditional wax blend to create our products.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_YfWRW6": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_Y69NQX",
+        "text_M8Cydg",
+        "button_YfWRW6"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_YLaAc9": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_RWVREp": {
+          "type": "heading",
+          "settings": {
+            "heading": "&nbsp;The Balancing Act",
+            "heading_size": "h1"
+          }
+        },
+        "text_Epq7EN": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Believing in the Swedish concept of Lagom, which literally means 'just right', all Misa candles have the optimum amount of fragrance intensity and throw - neither overpowering nor underwhelming, just right. Even without being lit, our fragrances pervade through a space, giving it a signature scent of its own.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_U64jU8": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_RWVREp",
+        "text_Epq7EN",
+        "button_U64jU8"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_FB67Uq": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_C8LAgH": {
+          "type": "heading",
+          "settings": {
+            "heading": "&nbsp;Tender Loving Care",
+            "heading_size": "h1"
+          }
+        },
+        "text_4PMrpY": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We believe in living calmly, mindfully and joyfully and this philosophy reflects in our collections, which are designed to suit every taste and occasion. &nbsp;</p><p>For us, good service doesn't stop at delivering products, it inspires us to care for you even after a sale. Light a MISA candle today and step into your happy space.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_GUTXbm": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_C8LAgH",
+        "text_4PMrpY",
+        "button_GUTXbm"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
     "image_banner_twLbCL",
-    "rich_text_DpLfEc"
+    "rich_text_DpLfEc",
+    "image_with_text_rpELcj",
+    "image_with_text_fRFJnL",
+    "image_with_text_YLaAc9",
+    "image_with_text_FB67Uq"
   ]
 }
