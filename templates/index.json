@@ -422,36 +422,36 @@
         "column11": {
           "type": "column",
           "settings": {
-            "title": "Add educational content",
-            "text": "<p>Provide content for your customers that sets their business up for success</p>",
-            "link_label": "Read now",
+            "title": "&nbsp;Discover the Perfect Candle&nbsp;",
+            "text": "<p>Every fragrance tells a story. Whether you love fresh floral notes, warm vanilla, refreshing citrus, or rich woody aromas, choosing the right scent can transform your space. Explore different fragrance families to find the perfect match for your personality, mood, and home.</p>",
+            "link_label": "",
             "link": ""
           }
         },
         "column12": {
           "type": "column",
           "settings": {
-            "title": "Add educational content",
-            "text": "<p>Provide content for your customers that sets their business up for success</p>",
-            "link_label": "Read now",
+            "title": "Learn How to Burn Candles Safely",
+            "text": "<p>A little care goes a long way in helping your candles burn beautifully. Before each use, trim the wick to approximately ¼ inch, place your candle on a stable, heat-resistant surface, and keep it away from drafts. Never leave a burning candle unattended, and keep it out of reach of children and pets.</p>",
+            "link_label": "",
             "link": ""
           }
         },
         "column13": {
           "type": "column",
           "settings": {
-            "title": "Add educational content",
-            "text": "<p>Provide content for your customers that sets their business up for success</p>",
-            "link_label": "Read now",
+            "title": "Create the Perfect Ambience&nbsp;",
+            "text": "<p>Create a welcoming atmosphere with fragrances that complement every moment. Choose calming lavender for a relaxing evening, fresh citrus for an energizing start to your day, or warm vanilla for a cozy night in. The right candle can make everyday moments feel extra special.</p>",
+            "link_label": "",
             "link": ""
           }
         },
         "column14": {
           "type": "column",
           "settings": {
-            "title": "Add educational content",
-            "text": "<p>Provide content for your customers that sets their business up for success</p>",
-            "link_label": "Read now",
+            "title": "Make Your Candles Last Longer&nbsp;",
+            "text": "<p>Make the most of your favourite candles with a few simple habits. Allow the wax to melt evenly across the surface during the first burn, avoid burning your candle for longer than the manufacturer's recommended duration, and store it in a cool, dry place away from direct sunlight. These small steps help maintain fragrance quality and promote a better burning experience.</p>",
+            "link_label": "",
             "link": ""
           }
         }
