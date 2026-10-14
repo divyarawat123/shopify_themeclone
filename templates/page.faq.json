@@ -10,11 +10,11 @@
 
 {
   "sections": {
+    // "main": {
+    //   "type": "main-page",
+    //   "settings": {}
+    // },
     "main": {
-      "type": "main-page",
-      "settings": {}
-    },
-    "faq_accordion": {
       "type": "faq",
       "settings": {},
       "blocks": {
@@ -36,5 +36,5 @@
       "block_order": ["faq1", "faq2"]
     }
   },
-  "order": ["main", "faq_accordion"]
+  "order": ["main"]
 }
