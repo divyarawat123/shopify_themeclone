@@ -334,8 +334,8 @@
         "column10": {
           "type": "column",
           "settings": {
-            "title": "Add a customer testimonial",
-            "text": "",
+            "title": "",
+            "text": "<p>The Diwali hampers curated by Tara candles had a fabulous demand after first supply of 1000 units it went to close at 10000 units due to overwhelming response from customers.</p><p></p><h2>Mr. Abhishek Karchuli</h2>",
             "link_label": "Shop now",
             "link": ""
           }
