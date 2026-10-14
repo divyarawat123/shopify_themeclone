@@ -308,8 +308,8 @@
           "type": "column",
           "settings": {
             "title": "Add a customer testimonial",
-            "text": "",
-            "link_label": "Shop now",
+            "text": "<p>Working with Team Tara is a kind of journey that one travels, the involvement they put into understand the reasoning is just phenomenal, one need to work with them to understand they are just an extension of product management team, I wish them luck for their future endeavors.</p><h2>Mr. Abhishek Dhama</h2>",
+            "link_label": "",
             "link": ""
           }
         },
