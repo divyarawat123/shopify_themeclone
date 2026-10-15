@@ -110,11 +110,11 @@
                     {% form 'product', product, class: 'new-arrivals__form' %}
                       <input type="hidden" name="id"
                              value="{{ product.selected_or_first_available_variant.id }}">
-                      <button type="submit"
+                      {% comment %} <button type="submit"
                               name="add"
                               class="new-arrivals__cart">
                         Add to cart
-                      </button>
+                      </button> {% endcomment %}
                     {% endform %}
                   {% else %}
                     <a class="new-arrivals__cart"
