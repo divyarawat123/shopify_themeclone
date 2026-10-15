@@ -370,7 +370,7 @@
       "settings": {
         "heading": "New Arrivals",
         "description": "Discover our latest products.",
-        "collection": "featured-products",
+        "collection": "collections",
         "products_to_show": 8,
         "columns_desktop": 4,
         "card_gap": 20,
