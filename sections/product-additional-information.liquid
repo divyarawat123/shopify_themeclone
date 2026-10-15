@@ -21,7 +21,7 @@
       {{ section.settings.additional_heading | escape }}
     </button>
 
-    <button
+    {% comment %} <button
       type="button"
       class="product-info-tab"
       role="tab"
@@ -31,7 +31,7 @@
     >
       {{ section.settings.reviews_heading | escape }}
       ({{ product_item.metafields.reviews.rating_count | default: 0 }})
-    </button>
+    </button> {% endcomment %}
   </div>
 
   <div
