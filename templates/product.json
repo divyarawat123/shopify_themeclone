@@ -130,12 +130,23 @@
         "padding_top": 36,
         "padding_bottom": 44
       }
+    },
+    "product_additional_information_MVhRpD": {
+      "type": "product-additional-information",
+      "name": "Product additional info",
+      "settings": {
+        "additional_heading": "Additional information",
+        "reviews_heading": "Reviews",
+        "empty_message": "No additional information available.",
+        "reviews_page": ""
+      }
     }
   },
   "order": [
     "main",
     "disclosures",
     "quick-order-list",
+    "product_additional_information_MVhRpD",
     "related-products"
   ]
 }
