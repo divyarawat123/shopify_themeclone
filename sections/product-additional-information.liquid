@@ -65,10 +65,10 @@
               </tr>
             {% endif %}
 
-            {% if product_item.metafields.custom.lighting_hours != blank %}
+            {% if product_item.metafields.custom.custom.lighting_hours_hrs != blank %}
               <tr>
                 <th scope="row">Lighting Hours (Hrs)</th>
-                <td>{{ product_item.metafields.custom.lighting_hours.value | escape }}</td>
+                <td>{{ product_item.metafields.custom.custom.lighting_hours_hrs.value | escape }}</td>
               </tr>
             {% endif %}
 
