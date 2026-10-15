@@ -44,12 +44,12 @@
       <div class="product-info-table-wrapper">
         <table class="product-info-table">
           <tbody>
-            {% comment %} {% if product_item.metafields.custom.weight_info != blank %}
+            {% if product_item.metafields.custom.weight != blank %}
               <tr>
                 <th scope="row">Weight</th>
-                <td>{{ product_item.metafields.custom.weight_info.value | escape }}</td>
+                <td>{{ product_item.metafields.custom.weight.value | escape }}</td>
               </tr>
-            {% endif %} {% endcomment %}
+            {% endif %}
 
             {% if product_item.metafields.custom.dimensions != blank %}
               <tr>
