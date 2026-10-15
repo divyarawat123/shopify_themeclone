@@ -65,6 +65,13 @@
               </tr>
             {% endif %}
 
+            {% if product_item.metafields.custom.lighting_hours != blank %}
+              <tr>
+                <th scope="row">Lighting Hours (Hrs)</th>
+                <td>{{ product_item.metafields.custom.lighting_hours.value | escape }}</td>
+              </tr>
+            {% endif %}
+
             {% comment %} {% if product_item.metafields.custom.fragrance_by_mood != blank %}
               <tr>
                 <th scope="row">Weight</th>
@@ -79,12 +86,7 @@
               </tr>
             {% endif %} {% endcomment %}
 
-            {% if product_item.metafields.custom.lighting_hours != blank %}
-              <tr>
-                <th scope="row">Lighting Hours (Hrs)</th>
-                <td>{{ product_item.metafields.custom.lighting_hours.value | escape }}</td>
-              </tr>
-            {% endif %}
+            
 
             {% comment %} {% if product_item.metafields.custom.color != blank %}
               <tr>
