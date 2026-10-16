@@ -56,13 +56,6 @@
           "settings": {
             "share_label": "Share"
           }
-        },
-        "text_LFWCk7": {
-          "type": "text",
-          "settings": {
-            "text": "Weight : {{ product.metafields.custom.weight.value }}",
-            "text_style": "body"
-          }
         }
       },
       "block_order": [
@@ -72,8 +65,7 @@
         "collapsible-row-1",
         "collapsible-row-0",
         "collapsible-row-2",
-        "share",
-        "text_LFWCk7"
+        "share"
       ],
       "settings": {
         "enable_sticky_info": true,
@@ -113,6 +105,16 @@
         "padding_bottom": 16
       }
     },
+    "product_additional_information_MVhRpD": {
+      "type": "product-additional-information",
+      "name": "Product additional info",
+      "settings": {
+        "additional_heading": "Additional information",
+        "reviews_heading": "Reviews",
+        "empty_message": "No additional information available.",
+        "reviews_page": ""
+      }
+    },
     "related-products": {
       "type": "related-products",
       "settings": {
@@ -129,16 +131,6 @@
         "show_rating": false,
         "padding_top": 36,
         "padding_bottom": 44
-      }
-    },
-    "product_additional_information_MVhRpD": {
-      "type": "product-additional-information",
-      "name": "Product additional info",
-      "settings": {
-        "additional_heading": "Additional information",
-        "reviews_heading": "Reviews",
-        "empty_message": "No additional information available.",
-        "reviews_page": ""
       }
     }
   },
