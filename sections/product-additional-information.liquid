@@ -58,7 +58,14 @@
               </tr>
             {% endif %}
 
-            {% if product_item.metafields.custom.size != blank %}
+            {% comment %} {% if product_item.metafields.custom.size != blank %}
+              <tr>
+                <th scope="row">Size</th>
+                <td>{{ product_item.metafields.custom.size.value | escape }}</td>
+              </tr>
+            {% endif %} {% endcomment %}
+
+            {% if product_item.metafields.custom.size.value != blank %}
               <tr>
                 <th scope="row">Size</th>
                 <td>{{ product_item.metafields.custom.size.value | escape }}</td>
