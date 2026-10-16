@@ -301,6 +301,54 @@
         "padding_bottom": 60
       }
     },
+    "image_with_text_WhtY7W": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_k4rJcU": {
+          "type": "heading",
+          "settings": {
+            "heading": "&nbsp;A LITTLE STORY ABOUT US",
+            "heading_size": "h2"
+          }
+        },
+        "text_BmqQWD": {
+          "type": "text",
+          "settings": {
+            "text": "<p>From humble beginnings to becoming Asia’s largest candle producer, accounting for 65 percent of the market share for candle supply in the corporate segment, Pan India.</p><p>Tara Candles was established in 2005 by a husband-wife duo, producing 10 kg of candles per day for a single client in the Mumbai region, the history of Tara candles…</p>",
+            "text_style": "body"
+          }
+        },
+        "button_RxqPz6": {
+          "type": "button",
+          "settings": {
+            "button_label": "Read More",
+            "button_link": "shopify://pages/about-us",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_k4rJcU",
+        "text_BmqQWD",
+        "button_RxqPz6"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/our_story.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "multicolumn1": {
       "type": "multicolumn",
       "blocks": {
@@ -495,6 +543,7 @@
     "rich_text",
     "featured_collection1",
     "collection_list",
+    "image_with_text_WhtY7W",
     "multicolumn1",
     "new_arrivals_slider_d3d7zB",
     "featured_collection2",
